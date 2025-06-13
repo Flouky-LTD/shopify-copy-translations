@@ -41,7 +41,7 @@ pip install requests
 python copy_translations.py --shop YOUR_SHOP.myshopify.com \
                           --source-theme-id SOURCE_THEME_ID \
                           --dest-theme-id DESTINATION_THEME_ID \
-                          [--token YOUR_ADMIN_TOKEN] \
+                          --token YOUR_ADMIN_TOKEN \
                           [--locales en,fr,es] \
                           [--dry-run] \
                           [--verbose] \
@@ -68,7 +68,8 @@ python copy_translations.py --shop YOUR_SHOP.myshopify.com \
 
 Copy all translations between themes:
 ```bash
-python copy_translations.py --shop my-store.myshopify.com \
+python copy_translations.py --shop my-store.myshopify.com \  
+                          --token shpat_XXX \
                           --source-theme-id 123456789 \
                           --dest-theme-id 987654321
 ```
@@ -76,6 +77,7 @@ python copy_translations.py --shop my-store.myshopify.com \
 Copy specific locales with verbose output:
 ```bash
 python copy_translations.py --shop my-store.myshopify.com \
+                          --token shpat_XXX \
                           --source-theme-id 123456789 \
                           --dest-theme-id 987654321 \
                           --locales en,fr \
@@ -85,6 +87,7 @@ python copy_translations.py --shop my-store.myshopify.com \
 Test run without making changes:
 ```bash
 python copy_translations.py --shop my-store.myshopify.com \
+                          --token shpat_XXX \
                           --source-theme-id 123456789 \
                           --dest-theme-id 987654321 \
                           --dry-run \
