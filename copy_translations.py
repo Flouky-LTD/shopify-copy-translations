@@ -171,7 +171,7 @@ def main():
                         "value": t["value"],
                         "translatableContentDigest": digest_map[src_id].get(t["key"]),
                     }
-                    for t in translations if digest_map[src_id].get(t["key"])
+                    for t in translations if digest_map[src_id].get(t["key"]) and t["value"] is not None
                 ]
                 if args.show_keys and inputs:
                     for inp in inputs:
